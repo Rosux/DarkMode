@@ -51,7 +51,11 @@ class Darkmode{
         function applyListener(buttons){
             for(let i=0;i<buttons.length;i++){
                 buttons[i].addEventListener('change', (e)=>{
-                    e.target.checked ? darkmode.off() : darkmode.on();
+                    if(e.target.getAttribute("darkmode-selector") == "1"){
+                        e.target.checked ? darkmode.off() : darkmode.on();
+                    }else if(buttons[i].getAttribute("darkmode-selector") == "2"){
+                        e.target.checked ? darkmode.on() : darkmode.off();
+                    }
                 });
             }
         }
@@ -99,28 +103,29 @@ class Darkmode{
         if (parts.length === 2) return parts.pop().split(';').shift();
     }
 }
-// ===========================Setting Up Darkmode=========================== //
-let darkModeTheme = "--header-color:hsl(0,0%,20%);--text-color:#d3d3d3;--background-color:hsl(0,0%,9%);--accent-color-1:#202020;--accent-color-2:#303030;";
-let lightModeTheme = "--header-color:hsl(0,0%,80%);--text-color:hsl(0,0%,17%);--background-color:hsl(0,0%,91%);--accent-color-1:hsl(0,0%,87%);--accent-color-2:hsl(0,0%,81%);";
-let darkmode = new Darkmode(darkModeTheme, lightModeTheme, true);
-
-
 /*
-///////////////////////////////////////////////////////////////////
-/////////////////////////explanation setup/////////////////////////
-///////////////////////////////////////////////////////////////////
 
-button example [dark, bright]:
-<div class="button-switch">
-    <input type="checkbox" id="darkmode" darkmode-selector="1">
-    <label for="darkmode"><p>Dark</p><p>Bright</p></label>
-</div>
-///////////////////////////////////////////////////////////////
-button example [Bright, dark]:
-<div class="button-switch">
-    <input type="checkbox" id="darkmode" darkmode-selector="2">
-    <label for="darkmode"><p>Bright</p><p>Dark</p></label>
-</div>
+
+// ===========================Setting Up Darkmode=========================== //
+Example:
+    let darkModeTheme = "--header-color:hsl(0,0%,20%);--text-color:#d3d3d3;--background-color:hsl(0,0%,9%);--accent-color-1:#202020;--accent-color-2:#303030;";
+    let lightModeTheme = "--header-color:hsl(0,0%,80%);--text-color:hsl(0,0%,17%);--background-color:hsl(0,0%,91%);--accent-color-1:hsl(0,0%,87%);--accent-color-2:hsl(0,0%,81%);";
+    let darkmode = new Darkmode(darkModeTheme, lightModeTheme, true);
+
+Details:
+    let darkmode = new DarkMode(
+        String : darkModeTheme
+        String : lightModeTheme
+        Bool   : darkByDefault? (default = true)
+    )
+
+Notes:
+    the darkmodetheme and lightmode theme are currently implemented to be a string of :root variables
+    so to use this you would need to create your site with colors/styles based on :root variables
+
+
+
+
 
 
 ///////////////////////////////////////////////////////////////////
@@ -129,7 +134,23 @@ button example [Bright, dark]:
 
 darkmode-selector="1"  =   if set true will make it light
 darkmode-selector="2"  =   if set true will make it dark
+
+///////////////////////////////////////////////////////////////////
+/////////////////////////explanation setup/////////////////////////
+///////////////////////////////////////////////////////////////////
+ex1:
+    button example [dark, bright]:
+    <div class="button-switch">
+        <input type="checkbox" id="darkmode" darkmode-selector="1">
+        <label for="darkmode"><p>Dark</p><p>Bright</p></label>
+    </div>
+ex2:
+    button example [Bright, dark]:
+    <div class="button-switch">
+        <input type="checkbox" id="darkmode" darkmode-selector="2">
+        <label for="darkmode"><p>Bright</p><p>Dark</p></label>
+    </div>
+
+
+
 */
-
-
-
