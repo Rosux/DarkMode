@@ -93,9 +93,9 @@ class Darkmode{
         }
     }
     setCookie(name, val, time=30){
-        var date = new Date();
-        date.setDate(date.getDate() + time);
-        document.cookie = name + "=" + encodeURIComponent(val) + ';expires=' + date + ',sameSite: "strict"; secure;';
+        var date=new Date;
+        date.setDate(date.getDate()+time);
+        document.cookie = name + "=" + encodeURIComponent(val) + ";expires=" + date + "; sameSite=strict; secure;";
     }
     getCookie(name){
         const value = `; ${document.cookie}`;
