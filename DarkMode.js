@@ -9,7 +9,6 @@ class DarkMode{
         this.mode = this.#getState();
         this.setTheme();
         if(document.readyState==="complete"||document.readyState === "interactive"){this.applyListener();}else{window.addEventListener("DOMContentLoaded",()=>{this.applyListener();});}
-        this.updateButtons();
     }
     /**
      * Set the theme to the users prefered color scheme
