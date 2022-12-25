@@ -49,13 +49,13 @@ if (darkMode.getMode()) {
 
 Customization
 
-You can customize the colors used in dark mode by passing an options object to the DarkMode constructor.
+You can customize the colors used in dark mode by passing an strings of css variables to the DarkMode constructor.
 
 ```js
-const darkMode = new DarkMode({
-  darkModeTheme: 'css variables for dark theme',
-  lightModeTheme: 'css variables for light theme'
-});
+const darkMode = new DarkMode(
+  'css variables for dark theme',
+  'css variables for light theme'
+);
 ```
 You can also add event listeners to elements with darkmode-button and darkmode-selector attributes to control the dark mode state.
 
