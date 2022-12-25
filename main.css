@@ -12,6 +12,7 @@ body, html{
     font-weight: 300;
     display: flex;
     flex-direction: column;
+    transition: background-color .4s linear;
 }
 p, a, h1, h2, h3, h4, h5, h6, ul{
     padding: 0;
@@ -27,29 +28,6 @@ p, a, h1, h2, h3, h4, h5, h6, ul{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.full{
-    min-height: 100vh;
-    width: 100%;
-    padding: 4rem 0 8rem 0;
-}
-.uwu{
-    font-size: 1em;
-}
-.wrap{
-    width: fit-content;
-}
-.wrap > p{
-    width: 100%;
-    text-align: left;
-}
-.indent{
-    width: 90%;
-    margin-left: 10%;
-}
-.indent-2{
-    width: 80%;
-    margin-left: 20%;
 }
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- button -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 .button-switch{

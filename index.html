@@ -6,19 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DarkMode By Rosux</title>
     <link rel="stylesheet" href="main.css">
-    <script src="DarkMode.js"></script>
+    <script src="DM.js"></script>
 </head>
 <body>
-    
-    <div class="button-switch uwu">
-        <input type="checkbox" id="darkmode" darkmode-selector="1">
-        <label for="darkmode"><p>Dark</p><p>Bright</p></label>
+    <script>
+        const dmt = "--text-color: hsl(0, 0%, 83%);--background-color: hsl(0, 0%, 9%);";
+        const lmt = "--text-color: hsl(0, 0%, 13%);--background-color: hsl(0, 0%, 89%);";
+        const darkmode = new Darkmode(dmt, lmt, true);
+    </script>
+    <div class="center">
+        <button darkmode-button="switch">switch</button>
+        <button darkmode-button="on">dark</button>
+        <button darkmode-button="off">light</button>
+        <button darkmode-button="default">default to prefered color scheme</button>
+        <input type="checkbox" darkmode-selector="true">
+        <input type="checkbox" darkmode-selector="false">
+        <div class="button-switch uwu">
+            <input type="checkbox" id="darkmode" darkmode-selector="false">
+            <label for="darkmode"><p>Dark</p><p>Bright</p></label>
+        </div>
+        <div class="button-switch uwu">
+            <input type="checkbox" id="darkmode" darkmode-selector="true">
+            <label for="darkmode"><p>Bright</p><p>Dark</p></label>
+        </div>
     </div>
-    <div class="button-switch uwu">
-        <input type="checkbox" id="darkmodeeee" darkmode-selector="2">
-        <label for="darkmodeeee"><p>Bright</p><p>Dark</p></label>
-    </div>
-        
-
 </body>
 </html>
