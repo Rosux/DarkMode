@@ -53,13 +53,13 @@ class DarkMode{
         const modeButton = document.querySelectorAll("[darkmode-button]");
         for(let i=0;i<modeButton.length;i++){
             modeButton[i].addEventListener("click", (e)=>{
-                if(e.target.getAttribute("darkmode-button") === "on"){
+                if(e.target.closest("[darkmode-button]").getAttribute("darkmode-button") === "on"){
                     this.on();
-                }else if(e.target.getAttribute("darkmode-button") === "off"){
+                }else if(e.target.closest("[darkmode-button]").getAttribute("darkmode-button") === "off"){
                     this.off();
-                }else if(e.target.getAttribute("darkmode-button") === "switch"){
+                }else if(e.target.closest("[darkmode-button]").getAttribute("darkmode-button") === "switch"){
                     this.toggle();
-                }else if(e.target.getAttribute("darkmode-button") === "default"){
+                }else if(e.target.closest("[darkmode-button]").getAttribute("darkmode-button") === "default"){
                     this.defaultColorScheme();
                 }
                 // add some attribute for css styling
