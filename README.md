@@ -57,18 +57,18 @@ const darkMode = new DarkMode(
   'css variables for light theme'
 );
 ```
-You can also add event listeners to elements with darkmode-button and darkmode-selector attributes to control the dark mode state.
+You can also add event listeners to elements with `darkmode-button` and `darkmode-selector` attributes to control the dark mode state.
 
 ```html
 <button darkmode-button="switch">switch</button>
 <button darkmode-button="on">make it dark</button>
 <button darkmode-button="off">make it light</button>
 <button darkmode-button="default">default to prefered color scheme</button>
-<input type="checkbox" darkmode-selector="true" value='if its checked its dark (defaults to true)'>
-<input type="checkbox" darkmode-selector="false" value='if its checked its light (defaults to true)'>
+<input type="checkbox" darkmode-selector="true"><!-- if its checked its dark (defaults to true) -->
+<input type="checkbox" darkmode-selector="false"><!-- if its checked its light (defaults to true) -->
 ```
 
-You can add eventListeners to new elements with darkmode-button and darkmode-selector attributes. This also automatically updates the buttons state.
+You can add eventListeners to new elements with `darkmode-button` and `darkmode-selector` attributes. This also automatically updates the buttons state.
 ```js
 darkMode.applyListener();
 ```
