@@ -7,8 +7,7 @@ class DarkMode{
         this.dmt = darkModeTheme;
         this.lmt = lightModeTheme;
         this.mode = this.#getState();
-        this.setTheme();
-        if(document.readyState==="complete"||document.readyState === "interactive"){this.applyListener();}else{window.addEventListener("DOMContentLoaded",()=>{this.applyListener();});}
+        if(document.readyState==="complete"||document.readyState==="interactive"){this.setTheme();this.applyListener();}else{window.addEventListener("DOMContentLoaded",()=>{this.setTheme();this.applyListener();});}
     }
     /**
      * Set the theme to the users prefered color scheme
