@@ -1,4 +1,4 @@
-class DarkMode{
+export default class DarkMode{
     /**
      * @param {string} darkModeTheme A string of css variables for a dark theme
      * @param {string} lightModeTheme A string of css variables for a light theme

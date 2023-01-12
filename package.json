@@ -1,0 +1,28 @@
+{
+  "name": "@rosux/darkmode",
+  "version": "1.0.0",
+  "description": "This package provides a simple way to allow you to easily implement a dark mode toggle feature on your website.",
+  "main": "DarkMode.js",
+  "files": [
+    "DarkMode.js",
+    "DarkMode-min.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rosux/DarkMode.git"
+  },
+  "keywords": [
+    "dark mode",
+    "switch",
+    "theme",
+    "theme-switch"
+  ],
+  "author": "Rosux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rosux/DarkMode/issues"
+  },
+  "homepage": "https://github.com/Rosux/DarkMode#readme"
+}

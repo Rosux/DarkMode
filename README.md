@@ -8,12 +8,12 @@ Made by Rosux.
 
 ## Installation
 
-To use this class on your website, include the `DarkMode.js` file in your project and instantiate a new DarkMode object with the required parameters.
+To use this class on your website, include the `DarkMode.js` file in your project or use the [npm package](https://www.npmjs.com/package/@rosux/darkmode) and instantiate a new DarkMode object with the required parameters.
 
 ```html
 <script src="DarkMode.js"></script> <!-- no defer needed -->
 <script>
-    const dark = "--background-color: black;";
+  const dark = "--background-color: black;";
     const light = "--background-color: white;";
     const darkMode = new DarkMode(dark, light);
 </script>
