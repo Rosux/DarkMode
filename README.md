@@ -13,7 +13,7 @@ To use this class on your website, include the `DarkMode.js` file in your projec
 ```html
 <script src="DarkMode.js"></script> <!-- no defer needed -->
 <script>
-  const dark = "--background-color: black;";
+    const dark = "--background-color: black;";
     const light = "--background-color: white;";
     const darkMode = new DarkMode(dark, light);
 </script>
